@@ -100,12 +100,19 @@ npm run dev
 13. In Metamask, switch to the previous Store Owner account to bring up the Store owner UI. Navigate to the "Ship Items" tab and ship the item(s) that were just purchased.
 14. In Metamask, switch back to the Shopper account to bring up the Shopper UI. Navigate to the "Receive Items" tab and receive the item(s) that were just purchased.
 
-## Congrats, you have used the Marketplace!
+### Congrats, you have used the Marketplace!
 
-# A Few Lessons Learned
+## A Few Lessons Learned
 
 1.  Some of the events rely on the block time. When using Ganache, it has a bug when attempting to change the block time so getting a feel for a real test or mainnet can be tough. You might see alerts in my app pop up when they shouldn't because there is no block time in vanilla ganache.
-
 2.  Need to think harder in the future about user experience because of the delay in block time.
-
 3.  Need to consider placing less storage and heavy logic on the blockchain if going to mainnet due to $$$!
+4.  IPFS only deals with static content for now so deploying dynamic websites can be a problem. I need to find alternative approaches to UI creation. We can flatten a site with tools like Jekyll but some of the dynamics are lost.
+
+## Rinkeby Testnet
+
+The contracts were also deployed to the Rinkeby Testnet to be sure that they operate in the public space. You can reach the contracts at the following addresses:
+
+- Ownable: 0x3c6ae7d9b2fcf8d3be23699913c621a92a12b4f0
+- Authentication: 0x85d2350b1e7115b0c6654f9d0ca9cd5d2b7e6244
+- Marketplace: 0x582239dd16f222ffd97e91b644567bee602c4c44
