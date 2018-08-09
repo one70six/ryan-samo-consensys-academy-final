@@ -7,6 +7,6 @@ const Ownable = artifacts.require('../installed_contracts/zeppelin/contracts/own
 module.exports = deployer => {
 	deployer
 		.deploy(Ownable)
-		.then(() => deployer.deploy(Authentication))
-		.then(() => deployer.deploy(Marketplace, Authentication.address))
+		.then(() => deployer.deploy(Authentication, { gas: 5000000 }))
+		.then(() => deployer.deploy(Marketplace, Authentication.address, { gas: 5000000 }))
 }
